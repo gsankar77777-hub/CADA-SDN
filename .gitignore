@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+
+# Large datasets
+datasets/
+public_dataset/
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
+
+# Results
+results/
+
+# Temporary files

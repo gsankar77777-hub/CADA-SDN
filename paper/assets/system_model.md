@@ -1,0 +1,9 @@
+# System Model
+
+The proposed Adaptive Context-Aware Risk Assessment (ACARA) framework operates within a Software-Defined Networking (SDN) environment consisting of Open vSwitch-based forwarding devices, end hosts, traffic generation modules, packet capture mechanisms, and the ACARA processing module. The SDN environment is responsible for forwarding both legitimate and attack traffic, while packet captures are collected for subsequent traffic analysis.
+
+The ACARA framework receives packet capture (PCAP) files generated from the experimental SDN environment as its primary input. These packet captures contain both normal network traffic and Distributed Denial-of-Service (DDoS) attack traffic, including TCP SYN Flood, UDP Flood, and ICMP Flood scenarios. The captured traffic is processed to extract network statistics and representative traffic features required for adaptive risk assessment.
+
+Based on the extracted traffic features, ACARA determines the current traffic context, dynamically assigns context-dependent feature weights, computes an adaptive risk score, and classifies the observed traffic into one of four predefined traffic contexts: Normal, Suspicious, High Risk, and Attack. Finally, the framework generates an appropriate mitigation recommendation corresponding to the computed risk level.
+
+The proposed system model assumes that packet capture data accurately represents the observed network traffic and that the extracted traffic features are sufficient to characterize both legitimate communication patterns and volumetric DDoS attacks. Under these assumptions, ACARA performs adaptive risk assessment while remaining computationally lightweight and suitable for SDN-based network security applications.
