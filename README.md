@@ -4,7 +4,7 @@
 
 This project presents an Adaptive Context-Aware Risk Assessment (ACARA) framework for detecting and mitigating Distributed Denial of Service (DDoS) attacks in Software-Defined Networks (SDN).
 
-The framework combines entropy-based traffic analysis, adaptive risk scoring, and Software-Defined Networking principles to identify abnormal traffic patterns and dynamically mitigate malicious flows.
+The framework combines entropy-based traffic analysis, adaptive risk scoring, and Software-Defined Networking principles to identify abnormal traffic patterns, assess their risk level, and recommend appropriate mitigation actions.
 
 ---
 
@@ -43,7 +43,6 @@ CADA-SDN
 ├── evaluation/
 ├── experiments/
 ├── graphs/
-├── paper/
 ├── src/
 ├── datasets/              (Not included in GitHub)
 ├── public_dataset/        (Not included in GitHub)
@@ -112,6 +111,29 @@ The evaluation module computes
 
 ---
 
+# Results
+
+The ACARA framework was evaluated using a generated SDN dataset containing 80 traffic samples: 20 Normal traffic samples and 60 DDoS attack samples consisting of TCP SYN Flood, UDP Flood, and ICMP Flood traffic.
+
+### Generated SDN Dataset
+
+* Accuracy: **100%**
+* Precision: **100%**
+* Recall: **100%**
+* F1 Score: **100%**
+* Average Detection Time: **0.0222 ms**
+* False Positives: **0**
+* False Negatives: **0**
+
+The framework correctly classified all Normal and DDoS traffic samples in the evaluated dataset.
+
+### CIC-DDoS2019 Benchmark
+
+The framework was also evaluated using a representative subset of the CIC-DDoS2019 benchmark dataset. The evaluated samples were assigned an Adaptive Risk Score (ARS) of **1.000** and classified as **Critical**, resulting in an OpenFlow drop-rule mitigation recommendation. The average processing time was **0.0222 ms**.
+
+These results demonstrate the ability of ACARA to perform adaptive risk assessment and provide context-aware mitigation recommendations with low processing overhead.
+
+----
 # Graphs
 
 Generated visualizations include
@@ -156,15 +178,9 @@ python experiments/run_experiment.py
 
 ---
 
-# Research Paper
-
-Adaptive Context-Aware Risk Assessment (ACARA) Framework for DDoS Detection and Mitigation in Software-Defined Networks
-
----
-
 # Author
 
-G Sankar
+GOURI BHAVANI SAI SANKAR
 
 ---
 
